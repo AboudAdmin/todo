@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        button {
+            margin: 5px;
+        }
+
+        #modifer {
+            color: blue;
+        }
+
+        #supprimer {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo app</h1>
+    <input type="text" name="search" placeholder="اكتب هنا" id="gggg" oninput="showText()">
+    <button onclick="displayText()">اضافة</button>
+    <div id="display-text"></div>
+    <div id="button-container">
+        <button id="modifer">modfier</button>
+        <button id="supprimer">supprimer</button>
+    </div>
+   
+
+    <script>
+           var taskText = "";
+
+function showText() {
+    var taskInput = document.getElementById("gggg");
+    taskText = taskInput.value;
+}
+
+function displayText() {
+    var displayText = document.getElementById("display-text");
+    displayText.textContent = " " + taskText;
+
+
+}
+    </script>
+</body>
+</html>
+
